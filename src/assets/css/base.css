@@ -36,10 +36,22 @@
     scroll-behavior: smooth;
 }
 
+/* ================================ TAG ============================= */
+
 html{
     font-size: 62.5%;
     line-height: 1.6rem;
     font-family: 'Roboto', sans-serif;
+}
+
+button{
+    border: none;
+    outline: none;
+}
+
+/* ================================= CLASS =========================== */
+.fade{
+    color: var(--gray);
 }
 
 .relative{
@@ -58,37 +70,24 @@ html{
     align-items: center;
 }
 
-.arrow__btn{
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
-    text-align: center;
-    border-radius: 50%;
-    font-size: 1.3rem;
-    cursor: pointer;
+.h-100{
+    height: 100%;
 }
 
-.hover__change:hover{
-    background: var(--hover__color);
-}
-
-.cant__click{
-    color: rgb(221, 221, 221);
-    cursor: not-allowed;
-}
-
-.border__circle{
-    border: 1px solid rgb(221, 221, 221);
-}
-
-.border__hover:hover{
-    border: 1px solid;
-}
-
-.hover__effect:hover{
-    transform: scale(1.04);
-}
 /*=================== grid system =================*/
+.row{
+    display: flex !important;
+    flex-wrap: wrap;
+}
+
+.row.flex-column{
+    flex-direction: column;
+}
+
+.row.flex-nowarp{
+    flex-wrap: nowrap;
+}
+
 .grid{
     width: 100%;
     display: block;
@@ -113,15 +112,6 @@ html{
 }
 /*=================== grid system =================*/
 
-/*======================= row =====================*/
-.row{
-    display: flex !important;
-    flex-wrap: wrap;
-}
-
-.row.flex-column{
-    flex-direction: column;
-}
 /*======================= col =====================*/
 /* mobile: s + prefix */
 @media (max-width: 743px){

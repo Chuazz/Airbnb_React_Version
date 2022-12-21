@@ -1,56 +1,54 @@
-{
-    "type":[
-        {
-            "name": "Khung cảnh tuyệt vời",
-            "image": "https://a0.muscache.com/pictures/3b1eb541-46d9-4bef-abc4-c37d77e3c21b.jpg"
-        },
-        {
-            "name": "Được ưa chuộng",
-            "image": "https://a0.muscache.com/pictures/3726d94b-534a-42b8-bca0-a0304d912260.jpg"
-        },
-        {
-            "name": "Mới",
-            "image": "https://a0.muscache.com/pictures/c0fa9598-4e37-40f3-b734-4bd0e2377add.jpg"
-        },
-        {
-            "name": "Thật ấn tượng",
-            "image": "https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg"
-        },
-        {
-            "name": "Nhà khung chữ A",
-            "image": "https://a0.muscache.com/pictures/1d477273-96d6-4819-9bda-9085f809dad3.jpg"
-        },
-        {
-            "name": "Phòng riêng",
-            "image": "https://a0.muscache.com/pictures/eb7ba4c0-ea38-4cbb-9db6-bdcc8baad585.jpg"
-        },
-        {
-            "name": "Hồ bơi tuyệt vời",
-            "image": "https://a0.muscache.com/pictures/3fb523a0-b622-4368-8142-b5e03df7549b.jpg"
-        },
-        {
-            "name": "Nhà nhỏ",
-            "image": "https://a0.muscache.com/pictures/35919456-df89-4024-ad50-5fcb7a472df9.jpg"
-        },
-        {
-            "name": "Phục vụ bữa sáng",
-            "image": "https://a0.muscache.com/pictures/5ed8f7c7-2e1f-43a8-9a39-4edfc81a3325.jpg"
-        },
-        {
-            "name": "Nông thôn",
-            "image": "https://a0.muscache.com/pictures/6ad4bd95-f086-437d-97e3-14d12155ddfe.jpg "
-        },
-        {
-            "name": "Chơi golf",
-            "image": "https://a0.muscache.com/pictures/6b639c8d-cf9b-41fb-91a0-91af9d7677cc.jpg"
-        },
-        {
-            "name": "Nhà trên cây",
-            "image": "https://a0.muscache.com/pictures/4d4a4eba-c7e4-43eb-9ce2-95e1d200d10e.jpg"
-        },
-        {
-            "name": "Hang động",
-            "image": "https://a0.muscache.com/pictures/4221e293-4770-4ea8-a4fa-9972158d4004.jpg"
-        }
-    ]
-}
+[
+    {
+        "name": "Khung cảnh tuyệt vời",
+        "image": "https://a0.muscache.com/pictures/3b1eb541-46d9-4bef-abc4-c37d77e3c21b.jpg"
+    },
+    {
+        "name": "Được ưa chuộng",
+        "image": "https://a0.muscache.com/pictures/3726d94b-534a-42b8-bca0-a0304d912260.jpg"
+    },
+    {
+        "name": "Mới",
+        "image": "https://a0.muscache.com/pictures/c0fa9598-4e37-40f3-b734-4bd0e2377add.jpg"
+    },
+    {
+        "name": "Thật ấn tượng",
+        "image": "https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg"
+    },
+    {
+        "name": "Nhà khung chữ A",
+        "image": "https://a0.muscache.com/pictures/1d477273-96d6-4819-9bda-9085f809dad3.jpg"
+    },
+    {
+        "name": "Phòng riêng",
+        "image": "https://a0.muscache.com/pictures/eb7ba4c0-ea38-4cbb-9db6-bdcc8baad585.jpg"
+    },
+    {
+        "name": "Hồ bơi tuyệt vời",
+        "image": "https://a0.muscache.com/pictures/3fb523a0-b622-4368-8142-b5e03df7549b.jpg"
+    },
+    {
+        "name": "Nhà nhỏ",
+        "image": "https://a0.muscache.com/pictures/35919456-df89-4024-ad50-5fcb7a472df9.jpg"
+    },
+    {
+        "name": "Phục vụ bữa sáng",
+        "image": "https://a0.muscache.com/pictures/5ed8f7c7-2e1f-43a8-9a39-4edfc81a3325.jpg"
+    },
+    {
+        "name": "Nông thôn",
+        "image": "https://a0.muscache.com/pictures/6ad4bd95-f086-437d-97e3-14d12155ddfe.jpg "
+    },
+    {
+        "name": "Chơi golf",
+        "image": "https://a0.muscache.com/pictures/6b639c8d-cf9b-41fb-91a0-91af9d7677cc.jpg"
+    },
+    {
+        "name": "Nhà trên cây",
+        "image": "https://a0.muscache.com/pictures/4d4a4eba-c7e4-43eb-9ce2-95e1d200d10e.jpg"
+    },
+    {
+        "name": "Hang động",
+        "image": "https://a0.muscache.com/pictures/4221e293-4770-4ea8-a4fa-9972158d4004.jpg"
+    }
+]

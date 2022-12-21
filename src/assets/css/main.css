@@ -1,0 +1,141 @@
+#header,
+#category {
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    padding: 0 80px;
+}
+
+.header__logo img {
+    width: 35px;
+}
+
+.header__logo p {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--light-red);
+    font-family: 'Concert One', cursive;
+}
+
+.header__nav {
+    width: fit-content;
+    margin: auto;
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 12px 0;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.header__nav:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.header__nav .nav__item {
+    font-size: 1.45rem;
+    padding: 0 16px;
+    font-weight: 500;
+    color: var(--black-1);
+}
+
+.header__nav .nav__item:nth-child(2) {
+    border-left: 1.7px solid var(--white-4);
+    border-right: 1.7px solid var(--white-4);
+}
+
+.header__nav .nav__item:last-child {
+    padding-right: 60px;
+}
+
+.header__nav .nav__item button {
+    position: absolute;
+    background: var(--light-red);
+    width: fit-content;
+    border-radius: 50%;
+    color: var(--white-1);
+    height: 35px;
+    width: 35px;
+    right: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.header__function .function__item {
+    padding: 8px 12px;
+    font-size: 1.45rem;
+    font-weight: 500;
+    border-radius: 30px;
+}
+
+.header__function .function__item:hover {
+    background: var(--white-3);
+    cursor: pointer;
+}
+
+.header__function .function__item:last-child:hover {
+    background: transparent;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+}
+
+.header__function .function__item:last-child {
+    border: 1px solid var(--white-4);
+    padding: 0;
+    margin-left: 4px;
+}
+
+.header__function .user__account {
+    width: 70px;
+    padding: 8px 0;
+}
+
+.header__function .user__account i {
+    padding: 4px 12px;
+    font-size: 1.6rem;
+    color: var(--gray);
+}
+
+.header__function .user__account i:last-child {
+    font-size: 2.7rem;
+    position: absolute;
+    right: -7px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#category {
+    top: 80px;
+}
+
+#category .category__item {
+    padding: 0 15px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    opacity: 0.5;
+    white-space: nowrap;
+}
+
+.category__body {
+    overflow-y: auto;
+    padding: 0;
+}
+
+.category__body::-webkit-scrollbar {
+    width: 0;
+}
+
+#category .category__item.active {
+    opacity: 1;
+}
+
+#category .category__item:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#category .category__item img {
+    width: 25px;
+}
