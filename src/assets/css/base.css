@@ -58,18 +58,6 @@ p{
     position: relative;
 }
 
-.jus-center{
-    justify-content: center;
-}
-
-.jus-end{
-    justify-content: end;
-}
-
-.ali-center{
-    align-items: center;
-}
-
 .h-100{
     height: 100%;
 }
@@ -77,6 +65,7 @@ p{
 .arrow-btn{
     font-size: 1.5rem;
     border: 1.5px solid var(--white-4);
+    color: var(--black-2);
     border-radius: 50%;
     height: 30px;
     width: 30px !important;
@@ -118,6 +107,22 @@ p{
 
 .grid.wide{
     padding: 0 80px;
+}
+
+.jus-betwwen{
+    justify-content: space-between;
+}
+
+.jus-center{
+    justify-content: center;
+}
+
+.jus-end{
+    justify-content: end;
+}
+
+.ali-center{
+    align-items: center;
 }
 
 /* mobile */

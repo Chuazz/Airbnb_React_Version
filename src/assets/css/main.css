@@ -7,6 +7,8 @@
     right: 0;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     padding: 0 80px;
+    z-index: 10;
+    background: var(--white-1);
 }
 
 .header__logo img {
@@ -113,6 +115,7 @@
 .category__body {
     overflow-y: auto;
     flex-basis: 89%;    
+    margin: 0 -18px;
 }
 
 .category__body::-webkit-scrollbar {
@@ -127,7 +130,7 @@
     white-space: nowrap;
     cursor: pointer;
     border-top: 5px solid;
-    border-bottom: 2px solid;
+    border-bottom: 3px solid;
     border-color: transparent;
 }
 
@@ -145,9 +148,6 @@
     width: 25px;
 }
 
-.category__control{
-}
-
 .category__control .category__next:hover{
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
     cursor: pointer;
@@ -161,4 +161,102 @@
     font-size: 1.3rem;
     border-radius: 10px;
     cursor: pointer;
+}
+
+#content{
+    padding-top: 180px;
+}
+
+.location__list{
+    margin: 0 -12px;
+}
+
+.location__item{
+    padding: 12px;
+    cursor: pointer;
+}
+
+.location__item .carousel{
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.location__item .card{
+    border: none;
+}
+
+.location__item img{
+    height: 270px;
+}
+
+.location__item button{
+    height: 5px !important;
+    width: 5px !important;
+    border-radius: 50%;
+}
+
+.location__item button.active{
+    transform: scale(1.2);
+}
+
+.location__item .carousel-control-next,
+.location__item .carousel-control-prev{
+    opacity: 1;
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 16px;
+}
+
+.location__item .arrow-btn{
+    background: var(--white-2);
+    border: none;
+    display: none;
+    transition: all 0.1s linear;
+    font-size: 1.3rem;
+}
+
+.location__item:hover .arrow-btn{
+    display: block;
+}
+
+.location__item .arrow-btn:hover{
+    transform: scale(1.1);
+}
+
+.location__info{
+    font-size: 1.6rem;
+}
+
+.location__info .title{
+    font-weight: 500;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 99%;
+}
+
+.location__info .sub-title{
+    color: var(--gray);
+}
+
+.location__info .price{
+    font-weight: 500;
+}
+
+.location__info .price span{
+    font-weight: normal;
+}
+
+.location__rate svg{
+    font-size: 1.1rem;
+    margin-right: 4px;
+}
+
+.location__rate p{
+    font-size: 1.6rem;
+    font-weight: 400;
 }

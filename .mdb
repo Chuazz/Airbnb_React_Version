@@ -1,8 +1,8 @@
 {
-  "projectName": "airbnb-react-ver",
+  "projectName": "airbnb-react-version",
   "meta": {
     "type": "frontend"
   },
   "packageManager": "npm",
-  "hash": "63be2b1e"
+  "hash": "4082cefe"
 }
