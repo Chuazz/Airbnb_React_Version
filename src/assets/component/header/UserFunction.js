@@ -7,15 +7,15 @@ function UserFunction(){
                 </div>
 
                 <div className="function__item">
-                    <i class="fa-solid fa-globe"></i>
+                    <i className="fa-solid fa-globe"></i>
                 </div>
 
                 <div className="function__item">
                     <div className="user__account relative">
                         <div className="row ali-center">
-                            <i class="fa-solid fa-bars"></i>
+                            <i className="fa-solid fa-bars"></i>
 
-                            <i class="fa-solid fa-circle-user"></i>
+                            <i className="fa-solid fa-circle-user"></i>
                         </div>
                     </div>
                 </div>

@@ -49,11 +49,11 @@ button{
     outline: none;
 }
 
-/* ================================= CLASS =========================== */
-.fade{
-    color: var(--gray);
+p{
+    margin: 0;
 }
 
+/* ================================= CLASS =========================== */
 .relative{
     position: relative;
 }
@@ -74,10 +74,33 @@ button{
     height: 100%;
 }
 
+.arrow-btn{
+    font-size: 1.5rem;
+    border: 1.5px solid var(--white-4);
+    border-radius: 50%;
+    height: 30px;
+    width: 30px !important;
+    line-height: 30px;
+    text-align: center; 
+    cursor: pointer;
+}
+
 /*=================== grid system =================*/
 .row{
     display: flex !important;
     flex-wrap: wrap;
+    margin: 0;
+}
+
+.row > *{
+    width: auto;
+    max-width: auto;
+    padding: 0;
+    margin: 0;  
+}
+
+.flex-1{
+    flex: 1;
 }
 
 .row.flex-column{

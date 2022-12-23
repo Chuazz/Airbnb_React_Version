@@ -12,7 +12,7 @@ function Navigation() {
                 </div>
                 
                 <div className="nav__item relative">
-                    <p className="fade">Thêm khách</p>
+                    <p style={{color: "var(--gray)"}}>Thêm khách</p>
                     
                     <button className="row ali-center jus-center">
                         <i className="fa-solid fa-magnifying-glass"></i>

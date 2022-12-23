@@ -1,11 +1,9 @@
-
+// Framework
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals.js';
-import "./assets/css/base.css";
-import "./assets/css/m_p.css";
-import "./assets/css/main.css";
-import "./assets/css/responsive.css"
+
+// Component
 import App from './assets/component/App.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
