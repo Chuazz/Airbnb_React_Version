@@ -1,5 +1,6 @@
 #header,
-#category {
+#category,
+#footer {
     height: 80px;
     position: fixed;
     top: 0;
@@ -259,4 +260,42 @@
 .location__rate p{
     font-size: 1.6rem;
     font-weight: 400;
+}
+
+#footer{
+    top: auto;
+    bottom: 0;
+    height: 50px;
+    z-index: 2;
+    font-size: 1.4rem;
+}
+
+.footer__policy ul li{
+    padding-right: 24px;
+}
+
+.footer__support{
+    margin: 0 -12px;
+}
+
+.footer__support .support__item{
+    padding: 0 12px;
+    color: var(--black-2);
+    font-weight: 500;
+}
+
+/* =========================== TEST ======================== */
+.layout{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #222;
+    font-size: 2rem;
+    color: #ccc;
+    z-index: 9000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

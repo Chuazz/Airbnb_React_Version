@@ -6,7 +6,7 @@ import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 
 // Data
-import types from "../../db/type.json"
+import types from "../../../db/type.json"
 
 var carouselItems = [];
 var temp = [];
