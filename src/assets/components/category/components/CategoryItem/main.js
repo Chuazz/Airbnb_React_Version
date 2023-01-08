@@ -1,12 +1,25 @@
 // Framework
 import clsx from "clsx";
+import { memo, useRef } from "react";
 
 // Style
 import styles from "./CategoryItem.module.scss"
 
-function CategoryItem({type}){
+function CategoryItem({type, active, onClick}){
+    const itemRef = useRef();
+
     return (
-        <div className={clsx(styles.categoryItem , "h-100")}>
+        <div 
+            className={clsx(
+                styles.item, "h-100",
+                {
+                    [styles.active]: active 
+                })
+            }
+            data-id={type.id}
+            onClick={e => onClick(itemRef)}
+            ref={itemRef}
+        >
             <div className="row flex-column ali-center jus-center h-100">
                 <div>
                     <img src={type.image} alt={type.name} />
@@ -20,4 +33,4 @@ function CategoryItem({type}){
     );
 }
 
-export default CategoryItem;
+export default memo(CategoryItem);

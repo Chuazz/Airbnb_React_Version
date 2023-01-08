@@ -67,7 +67,7 @@ img{
 
 /*=================== grid system =================*/
 .row{
-    display: flex !important;
+    display: flex;
     flex-wrap: wrap;
     margin: 0;
 }

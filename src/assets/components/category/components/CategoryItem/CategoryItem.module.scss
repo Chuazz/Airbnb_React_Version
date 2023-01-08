@@ -1,4 +1,4 @@
-.categoryItem {
+.item {
     margin: 0 18px;
     font-size: 1.3rem;
     font-weight: 500;
@@ -9,17 +9,21 @@
     border-bottom: 3px solid;
     border-color: transparent;
 
-    .active{
-        opacity: 1;
-        border-bottom-color: var(--black-2);
+    &:not(.active):active{
+        transform: scale(0.99);
     }
 
     &:not(.active):hover{
         opacity: 0.9;
-        border-bottom-color: var(--black-1);
+        border-bottom-color: var(--white-4);
     }
 
     img{
         width: 25px;
     }
+}
+
+.item.active{
+    opacity: 0.9;
+    border-bottom-color: var(--black-1);
 }

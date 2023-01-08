@@ -1,21 +1,36 @@
 // Framework
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 
 // Component
 import Logo from "./components/Logo/main.js";
 import UserFunction from "./components/Action/main.js";
-import Navigation from "./components/Navigation/main.js";
+import NavigationActive from "./components/Navigation/NavigationActive/main.js";
+import NavigationDefault from "./components/Navigation/NavigationDefault/main.js";
+
+// Function
+import { getParentElement } from "../../js/function.js";
 
 // Style
 import styles from "./Header.module.scss";
 
 function HeaderContainer() {
     const [navActive, setNavActive] = useState(false);
+    const navRef = useRef();
 
-    function handleClick(){
-        setNavActive(!navActive)
-    }
+    useEffect(() => {
+        function windowHandleClick(e){
+            if(getParentElement(e.target, `.${styles.nav}`) === undefined){
+                setNavActive(false);    
+            }
+        }
+
+        window.addEventListener("click", windowHandleClick);
+
+        return () => {
+            window.removeEventListener("click", windowHandleClick)
+        }
+    }, []);
 
     return (
         <div 
@@ -34,7 +49,19 @@ function HeaderContainer() {
                 </div>
             </div>
             
-            <Navigation onClick={handleClick}/>
+            <div className={clsx(styles.nav)}>
+                <div 
+                    className={clsx(styles.default)}
+                    onClick={() => setNavActive(true)}
+                    ref={navRef}
+                >
+                    <NavigationDefault/>
+                </div>
+
+                <div className={clsx(styles.active)}>
+                    <NavigationActive />
+                </div>
+            </div>
         </div>
     );
 }
