@@ -1,0 +1,43 @@
+.headerFunction {
+    .functionItem {
+        padding: 8px 12px;
+        font-size: 1.45rem;
+        font-weight: 500;
+        border-radius: 30px;
+    }
+
+    .functionItem:hover {
+        background: var(--white-3);
+        cursor: pointer;
+    }
+
+    .functionItem:last-child:hover {
+        background: transparent;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+    }
+
+    .functionItem:last-child {
+        border: 1px solid var(--white-4);
+        padding: 0;
+        margin-left: 4px;
+    }
+
+    .userAccount {
+        width: 70px;
+        padding: 8px 0;
+
+        i {
+            padding: 4px 12px;
+            font-size: 1.6rem;
+            color: var(--gray);
+        }
+
+        i:last-child {
+            font-size: 2.7rem;
+            position: absolute;
+            right: -7px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}

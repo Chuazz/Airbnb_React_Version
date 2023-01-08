@@ -1,0 +1,25 @@
+.categoryItem {
+    margin: 0 18px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    opacity: 0.5;
+    white-space: nowrap;
+    cursor: pointer;
+    border-top: 5px solid;
+    border-bottom: 3px solid;
+    border-color: transparent;
+
+    .active{
+        opacity: 1;
+        border-bottom-color: var(--black-2);
+    }
+
+    &:not(.active):hover{
+        opacity: 0.9;
+        border-bottom-color: var(--black-1);
+    }
+
+    img{
+        width: 25px;
+    }
+}

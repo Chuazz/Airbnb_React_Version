@@ -1,0 +1,77 @@
+.locationItem{
+    padding: 12px;
+    cursor: pointer;
+
+    img{
+        height: 270px;
+    }
+
+    button{
+        height: 5px !important;
+        width: 5px !important;
+        border-radius: 50%;
+    }
+
+    button.active{
+        transform: scale(1.2);
+    }
+
+
+    .arrowBtn{
+        color: var(--black-2);
+        border-radius: 50%;
+        height: 30px;
+        width: 30px !important;
+        line-height: 30px;
+        text-align: center; 
+        cursor: pointer;
+        background: var(--white-2);
+        display: none;
+        transition: all 0.1s linear;
+        font-size: 1.3rem;
+    }
+
+    &:hover .arrowBtn{
+        display: block;
+    }
+
+    .arrowBtn:hover{
+        transform: scale(1.1);
+    }
+
+    .locationInfo{
+        font-size: 1.6rem;
+
+        .title{
+            font-weight: 500;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: 99%;
+        }
+
+        .subTitle{
+            color: var(--gray);
+        }
+
+        .price{
+            font-weight: 500;
+
+            .price span{
+                font-weight: normal;
+            }
+        }
+    }
+
+    .locationRate{
+        svg{
+            font-size: 1.1rem;
+            margin-right: 4px;
+        }
+
+        p{
+            font-size: 1.6rem;
+            font-weight: 400;
+        }
+    }
+}

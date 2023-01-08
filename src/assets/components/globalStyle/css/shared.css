@@ -1,0 +1,35 @@
+.layout{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background: #fff;
+    display: none;
+}
+
+.layout.active{
+    display: block;
+}
+
+.card{
+    border: none;
+}
+
+.carousel-control-next,
+.carousel-control-prev{
+    opacity: 1;
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 16px;
+}
+
+.carousel{
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}

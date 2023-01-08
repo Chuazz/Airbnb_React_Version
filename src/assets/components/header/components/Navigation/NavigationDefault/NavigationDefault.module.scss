@@ -1,0 +1,29 @@
+.item{
+    font-size: 1.45rem;
+    padding: 0 16px;
+    font-weight: 500;
+    color: var(--black-1);
+
+    &:nth-child(2){
+        border-left: 1.7px solid var(--white-4);
+        border-right: 1.7px solid var(--white-4);
+    }
+
+    &:last-child{
+        padding-right: 60px;
+    }
+
+    button {
+        position: absolute;
+        background: var(--light-red);
+        width: fit-content;
+        border-radius: 50%;
+        color: var(--white-1);
+        height: 35px;
+        width: 35px;
+        right: 7px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+}
