@@ -15,32 +15,49 @@ function CategoryContainer() {
     const [types, setTypes] = useState([]);
     const [activeId, setActiveId] = useState(1);
     const [scrolling, setScrolling] = useState(false);
+    const [scrollForward, setScrollForward] = useState(0);
+    const [scrollBackward, setScrollBackward] = useState(0);
 
     const bodyRef = useRef();
-    var scrollWidth = useRef(0);
 
     const itemHandleClick = useCallback((ref) => {
         setActiveId(+ref.current.dataset.id)
     }, []);
 
-    const bodyHandleClickRight = useCallback(() => {
-        var bodyScrollWitdh = bodyRef.current.clientWidth;
+    const bodyHandleClickRight = () => {
+        var bodyScrollWitdh = bodyRef.current.offsetWidth;
+        var scrollWidth = bodyScrollWitdh * 0.7;
 
-        bodyRef.current.scroll(scrollWidth.current += (bodyScrollWitdh * 0.7), 0);
+        setScrollForward(prev => {
+            if (prev <= bodyRef.current.scrollWidth) {
+                prev += scrollWidth;
 
-        if(scrollWidth.current > 0){
-            setScrolling(true)
-        }
-    }, []);
+                if (prev > 0) {
+                    setScrolling(true)
+                }
+
+                bodyRef.current.scrollLeft = prev;
+                setScrollBackward(prev);
+            }
+            return prev;
+        });
+
+    };
 
     const bodyHandleClickLeft = useCallback(() => {
         var bodyScrollWitdh = bodyRef.current.clientWidth;
 
-        bodyRef.current.scroll(scrollWidth.current -= (bodyScrollWitdh * 0.7), 0);
+        setScrollBackward(prev => {
+            prev -= (bodyScrollWitdh * 0.7)
 
-        if(scrollWidth.current === 0){
-            setScrolling(false)
-        }
+            bodyRef.current.scrollLeft = prev;
+            setScrollForward(prev)
+            if(prev <= 0 ){
+                setScrolling(false);
+            }
+            return prev;
+        });
+        
     }, []);
 
     useEffect(() => {
@@ -52,6 +69,8 @@ function CategoryContainer() {
     return (
         <div id={clsx(styles.category)}>
             <div className="row ali-ceter h-100 relative">
+
+
                 <div
                     className={clsx(styles.body)}
                     ref={bodyRef}
@@ -68,7 +87,7 @@ function CategoryContainer() {
                     </div>
                 </div>
 
-                <div 
+                <div
                     className={clsx(
                         styles.control, "flex-1",
                         {
@@ -77,9 +96,9 @@ function CategoryContainer() {
                     )}
                 >
                     <div className="row ali-center jus-end h-100">
-                        <div 
+                        <div
                             className={clsx(
-                                styles.back, "row ali-center jus-end"
+                                styles.back, "row ali-center"
                             )}
                         >
                             <div

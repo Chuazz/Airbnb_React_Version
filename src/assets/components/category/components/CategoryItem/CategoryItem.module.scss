@@ -9,6 +9,10 @@
     border-bottom: 3px solid;
     border-color: transparent;
 
+    &:first-child{
+        margin-left: 0;
+    }
+
     &:not(.active):active{
         transform: scale(0.99);
     }

@@ -27,9 +27,9 @@ function ContentContainer() {
     return (
         <div id={clsx(styles.content)}>
             {loader && 
-            <div className={clsx(styles.layout, "active row ali-center jus-center")}>
-                <img src={logoImg} alt={logoImg} />
-            </div>
+                <div className="layout row ali-center jus-center">
+                    <img src={logoImg} alt={logoImg} />
+                </div>
             }
 
             <div className={clsx(styles.locationList, "row")}>

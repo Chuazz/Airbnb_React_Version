@@ -6,10 +6,6 @@
     bottom: 0;
     z-index: 999;
     background: #fff;
-    display: none;
-}
-
-.layout.active{
     display: block;
 }
 
