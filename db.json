@@ -878,5 +878,19 @@
             "name": "Trượt tuyết",
             "image": "https://a0.muscache.com/pictures/c8bba3ed-34c0-464a-8e6e-27574d20e4d2.jpg"
         }
+    ],
+    "options":[
+        {
+            "id": 1,
+            "name": "Chỗ ở"
+        },
+        {
+            "id": 2,
+            "name": "Trải nghiệm"
+        },
+        {
+            "id": 3,
+            "name": "Trải nghiệm trực tuyến"
+        }
     ]
 }

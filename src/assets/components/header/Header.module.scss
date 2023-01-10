@@ -15,8 +15,9 @@
         transform: translate(-50%, 15px);
 
         .active {
-            transform: translateY(-105px);
-            opacity: 0;
+            // transform: translateY(-105px);
+            // opacity: 0;
+            display: none;
         }
     
         .default {
@@ -46,9 +47,10 @@
         }
     
         .active {
-            transform: translateY(0);
-            opacity: 1;
-            transition: all 0.5s linear;
+            // transform: translateY(0);
+            // opacity: 1;
+            // transition: all 0.5s linear;
+            display: block;
         }
     }
 }
