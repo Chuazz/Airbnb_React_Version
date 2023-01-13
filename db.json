@@ -879,18 +879,64 @@
             "image": "https://a0.muscache.com/pictures/c8bba3ed-34c0-464a-8e6e-27574d20e4d2.jpg"
         }
     ],
-    "options":[
+    "options": [
         {
             "id": 1,
-            "name": "Chỗ ở"
+            "name": "Chỗ ở",
+            "detail": "address"
         },
         {
             "id": 2,
-            "name": "Trải nghiệm"
+            "name": "Trải nghiệm",
+            "detail": "experience"
         },
         {
             "id": 3,
-            "name": "Trải nghiệm trực tuyến"
+            "name": "Trải nghiệm trực tuyến",
+            "detail": "onlineExperience"
+        }
+    ],
+    "optionDetail": [
+        {
+            "id": 1,
+            "name": "Địa điểm",
+            "disabled": false,
+            "placeholder": "Tìm kiếm điểm đến",
+            "detail": "address",
+            "details": []
+        },
+        {
+            "id": 2,
+            "details": [
+                {
+                    "optionId": 1,
+                    "name": "Nhận phòng",
+                    "disabled": true,
+                    "placeholder": "Thêm ngày",
+                    "detail": "experience"
+                },
+                {
+                    "optionId": 1,
+                    "name": "Trả phòng",
+                    "disabled": true,
+                    "placeholder": "Thêm ngày"
+                },
+                {
+                    "optionId": 2,
+                    "name": "Ngày",
+                    "disabled": true,
+                    "placeholder": "Thêm ngày",
+                    "detail": "experience"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Khách",
+            "disabled": true,
+            "placeholder": "Thêm khách",
+            "details": [],
+            "detail": "onlineExperience"
         }
     ]
 }
