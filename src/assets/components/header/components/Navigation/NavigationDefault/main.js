@@ -1,31 +1,48 @@
 // Framework
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clsx from "clsx";
+import { memo } from "react";
+
+// Data
+import data from "./data.json"
 
 // Style
 import styles from "./NavigationDefault.module.scss"
 
-function NavigationDefault() {
+function NavigationDefault({ onClick }) {
+    const itemHandleClick = (id) => {
+        onClick(id);
+    }
+
     return (
         <div className={clsx(styles.container)}>
-            <div className="row ali-center jus-center">
-                <div className={clsx(styles.item, "p-l-24")}>
-                    <p>Địa điểm bất kì</p>
-                </div>
-
-                <div className={clsx(styles.item)}>
-                    <p>Tuần bất kỳ</p>
-                </div>
-
-                <div className={clsx(styles.item, "relative")}>
-                    <p style={{ color: "var(--gray)" }}>Thêm khách</p>
-
-                    <button className="row ali-center jus-center">
-                        <i className="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </div>
+            <div className={clsx(styles.titles, "row ali-center jus-center")}>
+                {data.titles.map(item => (
+                    <div
+                        key={item.id}
+                        className={clsx(
+                            styles.title,
+                            {
+                                ["relative"]: item.special
+                            }
+                        )}
+                        onClick={() => itemHandleClick(item.id)}
+                    >
+                        <p>{item.name}</p>
+                    </div>
+                ))}
             </div>
+
+            <button 
+                className={clsx(
+                    styles.searchBtn, 
+                    "row ali-center jus-center"
+                )}
+            >
+                <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
+            </button>
         </div>
     );
 }
 
-export default NavigationDefault;
+export default memo(NavigationDefault);

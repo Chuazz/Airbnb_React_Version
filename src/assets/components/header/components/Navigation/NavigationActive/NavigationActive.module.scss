@@ -1,60 +1,53 @@
 .container{
     width: fit-content;
+    position: relative;
     margin: auto;
     padding: 12px 0;
     border-radius: 40px;
     font-size: 1.7rem;
     font-weight: 400;
-    position: relative;
 
-    .item{
-        margin: 0 16px;
-        position: relative;
-        cursor: pointer;
-        
-        &:hover {
-            opacity: 0.7;    
-        
-            .customeHr{
-                transform: translateX(-50%);
-                width: 100%;
+    .tabs{
+        .tabItem{
+            margin: 0 16px;
+            position: relative;
+            cursor: pointer;
+
+            &.active{
+                &:hover {
+                    opacity: 1;    
+                }
+                
+                .customeHr{
+                    transform: translateX(-50%);
+                    width: 100%;
+                    opacity: 1;    
+                }   
+            }
+            
+            &:hover {
                 opacity: 0.7;    
+            
+                .customeHr{
+                    transform: translateX(-50%);
+                    width: 100%;
+                    opacity: 0.7;    
+                }
+            }
+    
+            .customeHr{
+                position: absolute;
+                height: 1.7px;
+                border-radius: 10px;
+                width: 0;
+                background: #000;
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 0;
+                transform-origin: 50% top;
+                top: 112%;
+                transition: all 0.3s ease-in;
             }
         }
-
-        .customeHr{
-            position: absolute;
-            height: 1.7px;
-            border-radius: 10px;
-            width: 0;
-            background: #000;
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 0;
-            transform-origin: 50% top;
-            top: 112%;
-            transition: all 0.3s ease-in;
-        }
-    }
-
-    .item.active{
-        
-        &:hover {
-            opacity: 1;    
-        }
-        
-        .customeHr{
-            transform: translateX(-50%);
-            width: 100%;
-            opacity: 1;    
-        }   
-    }
-
-    .activeBlock{
-        position: absolute;
-        left: 50%;
-        top: 120%;
-        transform: translateX(-50%);
-        width: 850px;
     }
 }

@@ -11,7 +11,7 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
     }
 
-    .item{
+    .title{
         font-size: 1.45rem;
         padding: 0 16px;
         font-weight: 500;
@@ -24,20 +24,22 @@
     
         &:last-child{
             padding-right: 60px;
+            color: var(--gray);
         }
+    }
     
-        button {
-            position: absolute;
-            background: var(--light-red);
-            width: fit-content;
-            border-radius: 50%;
-            color: var(--white-1);
-            height: 35px;
-            width: 35px;
-            right: 7px;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-        }
+    button {
+        position: absolute;
+        background: var(--light-red);
+        width: fit-content;
+        border-radius: 50%;
+        color: var(--white-1);
+        height: 35px;
+        width: 35px;
+        right: 7px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        font-size: 1.35rem;
     }
 }

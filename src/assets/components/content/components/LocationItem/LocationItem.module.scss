@@ -2,6 +2,10 @@
     padding: 12px;
     cursor: pointer;
 
+    &:hover .arrowBtn{
+        display: block;
+    }
+
     img{
         height: 270px;
     }
@@ -10,12 +14,11 @@
         height: 5px !important;
         width: 5px !important;
         border-radius: 50%;
-    }
 
-    button.active{
-        transform: scale(1.2);
+        &.active{
+            transform: scale(1.2);
+        }
     }
-
 
     .arrowBtn{
         color: var(--black-2);
@@ -29,14 +32,10 @@
         display: none;
         transition: all 0.1s linear;
         font-size: 1.3rem;
-    }
 
-    &:hover .arrowBtn{
-        display: block;
-    }
-
-    .arrowBtn:hover{
-        transform: scale(1.1);
+        &:hover{
+            transform: scale(1.1);
+        }
     }
 
     .locationInfo{

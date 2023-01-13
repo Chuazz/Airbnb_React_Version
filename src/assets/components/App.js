@@ -10,8 +10,8 @@ import FooterContainer from "./footer/main.js";
 
 // Icon
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faSliders, faAngleRight, faAngleLeft, faStar, faAngleUp } from "@fortawesome/free-solid-svg-icons";
-library.add(faSliders, faAngleRight, faAngleLeft, faStar, faAngleUp)
+import { faSliders, faAngleRight, faAngleLeft, faStar, faAngleUp, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+library.add(faSliders, faAngleRight, faAngleLeft, faStar, faAngleUp, faMagnifyingGlass)
 
 function App() {
     return (

@@ -1,5 +1,5 @@
 // Framework
-import { useEffect, useRef, useState } from "react";
+import { memo, useCallback, useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 
 // Component
@@ -8,29 +8,35 @@ import UserFunction from "./components/Action/main.js";
 import NavigationActive from "./components/Navigation/NavigationActive/main.js";
 import NavigationDefault from "./components/Navigation/NavigationDefault/main.js";
 
-// Function
-import { getParentElement } from "../../js/function.js";
-
 // Style
 import styles from "./Header.module.scss";
 
 function HeaderContainer() {
     const [navActive, setNavActive] = useState(false);
-    const navRef = useRef();
+    const [activeId, setActiveId] = useState(1);
+    const headerRef = useRef();
 
     useEffect(() => {
         function windowHandleClick(e){
-            if(getParentElement(e.target, `.${styles.nav}`) === undefined){
-                setNavActive(false);    
-            }
+            // document.body.addEventListener("click", e => {
+            //     if(!headerRef.current.contains(e.target)){
+            //         setNavActive(false);
+            //     }
+            // })
+            // console.log(headerRef.current.contains(e.target))
         }
 
-        window.addEventListener("click", windowHandleClick);
+        document.body.addEventListener("click", windowHandleClick);
 
         return () => {
-            window.removeEventListener("click", windowHandleClick)
+            document.body.removeEventListener("click", windowHandleClick)
         }
     }, []);
+
+    const itemHandleClick = useCallback((id) => {
+        setNavActive(true)
+        setActiveId(id)
+    }, [])
 
     return (
         <div 
@@ -38,9 +44,10 @@ function HeaderContainer() {
             className={clsx({
                 [styles.active]: navActive
             })}
-        >
+            ref={headerRef}
+            >
             <div className="row jus-betwwen h-100 p-t-20">
-                <div className="h-4">
+                <div className="h-4" onClick={() => setNavActive(!navActive)}>
                     <Logo />
                 </div>
 
@@ -52,18 +59,19 @@ function HeaderContainer() {
             <div className={clsx(styles.nav)}>
                 <div 
                     className={clsx(styles.default)}
-                    onClick={() => setNavActive(true)}
-                    ref={navRef}
                 >
-                    <NavigationDefault/>
+                    <NavigationDefault onClick={itemHandleClick}/>
                 </div>
 
                 <div className={clsx(styles.active)}>
-                    <NavigationActive />
+                    <NavigationActive 
+                        isActive={navActive} 
+                        activeBlockId={activeId}
+                    />
                 </div>
             </div>
         </div>
     );
 }
 
-export default HeaderContainer;
+export default memo(HeaderContainer);

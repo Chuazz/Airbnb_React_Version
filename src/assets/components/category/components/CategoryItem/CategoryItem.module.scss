@@ -22,12 +22,12 @@
         border-bottom-color: var(--white-4);
     }
 
+    &.active{
+        opacity: 0.9;
+        border-bottom-color: var(--black-1);
+    }
+
     img{
         width: 25px;
     }
-}
-
-.item.active{
-    opacity: 0.9;
-    border-bottom-color: var(--black-1);
 }

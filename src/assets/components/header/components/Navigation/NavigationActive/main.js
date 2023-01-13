@@ -3,15 +3,39 @@ import clsx from "clsx";
 import { memo, useEffect, useState } from "react";
 
 // Component
-import Accommodation from "./Accommodation/main.js";
+import TabList from "./TabList/main.js"
 
 // Style
 import styles from "./NavigationActive.module.scss";
 
-function NavigationActive() {
+function temp(array, id){
+    var result = [];
+
+    array.forEach(t => {
+        var temp = t.details.filter(t2 => t2.optionId === id)
+        if(temp.length === 1){
+            t  = {...t, ...temp[0]};
+            temp = [];
+        }
+        t.details = temp
+
+        result.push(t)
+    });
+
+    return result || [];
+}
+
+
+function NavigationActive({ isActive, activeBlockId }) {
+    const [activeId, setActiveId] = useState(activeBlockId);
     const [options, setOptions] = useState([]);
-    const [activeOption, setActiveOption] = useState(1);
-    const [activeOptionBlock, setActiveOptionBlock] = useState(1);
+    const [optionDetail, setOptionDetail] = useState([]);
+    
+    useEffect(() => {
+        fetch("http://localhost:3000/optionDetail")
+            .then(response => response.json())
+            .then(data => setOptionDetail(temp(data, activeId)))
+    }, [activeId]);
 
     useEffect(() => {
         fetch("http://localhost:3000/options")
@@ -19,33 +43,34 @@ function NavigationActive() {
             .then(data => setOptions(data))
     }, []);
 
-    const itemHandleClick = (id) => {
-        setActiveOption(id)
-    }
-
     return (
-        <div className={clsx(styles.container)}>
-            <div className="row ali-center jus-center">
-                {options.map(option => (
-                    <div 
-                        key={option.id} 
+        <div 
+            className={clsx(
+                styles.container
+            )}
+        >
+            <div className={clsx(styles.tabs, "row ali-center jus-center")}>
+                {options.map((option, i) => (
+                    <div
+                        key={i}
                         className={clsx(
-                            styles.item,
+                            styles.tabItem,
                             {
-                                [styles.active]: option.id === activeOption
+                                [styles.active]: option.id === activeId
                             }
                         )}
-                        onClick={() => itemHandleClick(option.id)}
+                        onClick={() => setActiveId(option.id)}
                     >
                         <p>{option.name}</p>
                         <div className={clsx(styles.customeHr)}></div>
                     </div>
                 ))}
             </div>
-
-            <div className={clsx(styles.activeBlock)}>
-                <Accommodation />
-            </div>
+            
+            <TabList 
+                isActive={isActive} 
+                optionDetail={optionDetail}
+            />
         </div>
     );
 }

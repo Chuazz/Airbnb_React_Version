@@ -1,0 +1,19 @@
+{
+    "titles": [
+        {
+            "id": 1,
+            "name": "Địa điểm bất kì",
+            "special": false
+        },
+        {
+            "id": 2,
+            "name": "Tuần bất kỳ",
+            "special": false
+        },
+        {
+            "id": 3,
+            "name": "Thêm khách",
+            "special": true
+        }
+    ]
+}
