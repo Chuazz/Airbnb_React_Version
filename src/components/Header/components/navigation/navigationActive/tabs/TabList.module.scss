@@ -1,0 +1,63 @@
+.container {
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translateX(-50%) scale(0);
+    opacity: 0;
+    transform-origin: 50% top;
+    width: 850px;
+    transition: all 0.5s linear;
+
+    &.active{
+        top: 120%;
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }   
+
+    .items {
+
+        .item {
+            background: #ebebeb;
+            border-radius: 50px;
+            font-size: 1.35rem;
+            cursor: pointer;
+            font-weight: 500;
+
+            &.active {
+                display: flex;
+            }
+        }
+    }
+
+    .searchBtn {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--white-1);
+        border-radius: 25px;
+        height: 45px;
+        width: 130px;
+        background:
+            radial-gradient(circle at left center,
+            rgb(255, 56, 92) 0%, rgb(230, 30, 77) 27.5%,
+            rgb(227, 28, 95) 40%, rgb(215, 4, 102) 57.5%);
+        font-weight: 500;
+
+        svg{
+            font-size: 1.5rem;
+            padding-right: 4px;
+        }
+    }
+
+    .itemActions{
+
+        .itemACtion{
+            display: none;
+
+            &.active{
+                display: block;
+            }
+        }
+    }
+}

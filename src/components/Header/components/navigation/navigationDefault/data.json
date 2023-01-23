@@ -1,0 +1,22 @@
+{
+    "titles": [
+        {
+            "id": 1,
+            "name": "Địa điểm bất kì",
+            "special": false,
+            "detail": "address"
+        },
+        {
+            "id": 2,
+            "name": "Tuần bất kỳ",
+            "special": false,
+            "detail": "experience"
+        },
+        {
+            "id": 3,
+            "name": "Thêm khách",
+            "special": true,
+            "detail": "onlineExperience"
+        }
+    ]
+}

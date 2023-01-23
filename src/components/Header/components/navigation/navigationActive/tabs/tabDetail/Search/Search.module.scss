@@ -1,0 +1,40 @@
+.container{
+    position: absolute;
+    z-index: 111;
+    background: var(--white-1);
+    width: 500px;
+    padding: 32px 40px;
+    border-radius: 20px;
+    top: 122%;
+    box-shadow: 0 0 10px rgba(0, 0,0,0.5);
+
+    .title{
+        padding-bottom: 12px;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .items{
+        margin: 0 -7px;
+
+        .item{
+            padding: 16px 7px;
+            font-size: 1.4rem;
+        
+            img{
+                width: 100%;
+                border-radius: 15px;
+                border: 1px solid var(--white-4);
+                cursor: pointer;
+
+                &:hover{
+                    border-color: var(--black-1);
+                }
+            }
+
+            p{
+                padding-top: 4px;
+            }
+        }
+    }
+}   

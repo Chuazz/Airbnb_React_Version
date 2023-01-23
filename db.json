@@ -882,18 +882,15 @@
     "options": [
         {
             "id": 1,
-            "name": "Chỗ ở",
-            "detail": "address"
+            "name": "Chỗ ở"
         },
         {
             "id": 2,
-            "name": "Trải nghiệm",
-            "detail": "experience"
+            "name": "Trải nghiệm"
         },
         {
             "id": 3,
-            "name": "Trải nghiệm trực tuyến",
-            "detail": "onlineExperience"
+            "name": "Trải nghiệm trực tuyến"
         }
     ],
     "optionDetail": [
@@ -919,7 +916,8 @@
                     "optionId": 1,
                     "name": "Trả phòng",
                     "disabled": true,
-                    "placeholder": "Thêm ngày"
+                    "placeholder": "Thêm ngày",
+                    "detail": "experience"
                 },
                 {
                     "optionId": 2,

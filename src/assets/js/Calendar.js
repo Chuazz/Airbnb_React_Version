@@ -15,7 +15,6 @@ function RenderCalendar(selector, month, year, isCurr = false){
         title.innerHTML = `${months[month]} năm ${year}`;
 
         days.innerHTML = "";
-
         for(let i = firstDayOfWeek; i > 0; i--){
             days.innerHTML += `<p class="fade">${i}</p>`
         }
